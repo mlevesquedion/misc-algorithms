@@ -3,7 +3,7 @@ def add(Z1, Z2):
 
 
 def add_ndim(Z1, Z2):
-    # assumes Z1 and Z2 have same dimensions
+    # assumes Z1 and Z2 have same, regular dimensions
     if isinstance(Z1[0], list):
         return [add_ndim(z1, z2) for z1, z2 in zip(Z1, Z2)]
     return add(Z1, Z2)
